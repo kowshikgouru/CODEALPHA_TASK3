@@ -1,0 +1,182 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #141e30,
+        #243b55
+    );
+    padding:20px;
+}
+
+.music-player{
+    width:400px;
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.music-player h1{
+    margin-bottom:20px;
+    color:#333;
+}
+
+.cover-container{
+    overflow:hidden;
+    border-radius:15px;
+}
+
+#cover{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.5s;
+}
+
+#cover:hover{
+    transform:scale(1.05);
+}
+
+.song-details{
+    margin-top:15px;
+}
+
+.song-details h2{
+    color:#222;
+}
+
+.song-details p{
+    color:#666;
+    margin-top:5px;
+}
+
+/* Progress Bar */
+
+.progress-container{
+    width:100%;
+    height:10px;
+    background:#ddd;
+    border-radius:10px;
+    margin-top:20px;
+    cursor:pointer;
+    overflow:hidden;
+}
+
+.progress{
+    width:0%;
+    height:100%;
+    background:#28a745;
+    transition:width 0.1s linear;
+}
+
+/* Time */
+
+.time-info{
+    display:flex;
+    justify-content:space-between;
+    margin-top:8px;
+    font-size:14px;
+    color:#555;
+}
+
+/* Controls */
+
+.controls{
+    margin-top:20px;
+}
+
+.controls button{
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    margin:0 8px;
+    font-size:22px;
+    cursor:pointer;
+    background:#28a745;
+    color:white;
+    transition:0.3s;
+}
+
+.controls button:hover{
+    transform:scale(1.1);
+    background:#218838;
+}
+
+/* Volume */
+
+.volume-section{
+    margin-top:20px;
+}
+
+.volume-section label{
+    display:block;
+    margin-bottom:8px;
+}
+
+#volume{
+    width:100%;
+}
+
+/* Playlist */
+
+.playlist-section{
+    margin-top:25px;
+    text-align:left;
+}
+
+.playlist-section h3{
+    margin-bottom:10px;
+}
+
+#playlist{
+    list-style:none;
+}
+
+#playlist li{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#playlist li:hover{
+    background:#f0f0f0;
+}
+
+.active-song{
+    background:#d4edda;
+    font-weight:bold;
+    color:#155724;
+}
+
+/* Responsive */
+
+@media(max-width:500px){
+
+    .music-player{
+        width:100%;
+    }
+
+    #cover{
+        height:220px;
+    }
+
+    .controls button{
+        width:50px;
+        height:50px;
+    }
+
+}
